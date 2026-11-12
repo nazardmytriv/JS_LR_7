@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wherever you go, there you are</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 12px; }
+    form { margin-bottom: 12px; }
+    input[type=button] { padding: 6px 12px; cursor: pointer; }
+    input[type=number] { width: 120px; padding: 4px; }
+    #destination-box { margin: 12px 0; }
+    #destination-message { color: #c62828; min-height: 20px; }
+    #map { height: 400px; max-width: 900px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <form>
+    <input type="button" id="watch" value="Watch me">
+    <input type="button" id="clearWatch" value="Clear watch">
+  </form>
+
+  <div id="location">
+    Your location will go here.
+  </div>
+  <div id="distance">
+    Distance from College will go here.
+  </div>
+
+  <div id="destination-box">
+    <strong>Пункт призначення:</strong>
+    <input type="number" id="dest-lat" step="any" placeholder="Широта">
+    <input type="number" id="dest-lon" step="any" placeholder="Довгота">
+    <input type="button" id="setDestination" value="Задати пункт">
+    <input type="button" id="goDestination" value="Показати на карті">
+    <div id="destination-message"></div>
+    <div id="destination-distance"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="myLoc.js"></script>
+</body>
+</html>
